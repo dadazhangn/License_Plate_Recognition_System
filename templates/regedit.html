@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href={% static 'css/style_login.css' %}>
+</head>
+<body>
+<div class="box">
+    <div class="box">
+        <h2>注册</h2>
+        <form action=" " method="post">
+            {% csrf_token %}
+            <div class="input-box">
+                <label>账号</label>
+                <input type="text" name="account"/>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-user"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box">
+                <label>密码</label>
+                <input type="password" name="password"/>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box">
+                <label>验证密码</label>
+                <input type="password" name="v-password"/>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <div class="col-8" style="margin-top: 10px;color:rgba(253,74,2,0.5);">
+                    <label for="agreeTerms" style="width: 200px; height: 10px;font-size: medium">
+                        {{ info }}
+                    </label>
+                </div>
+                <div style="display: inline">
+                    <button id="bt" type="submit" style="height: 35px;">注册</button>
+                </div>
+            </div>
+        </form>
+        <div class="btn-box">
+            <div style="display: inline; margin-left: 145px; margin-top: -45px">
+            <button id="bt" style="height: 35px;" onclick="location.href='../login/'">返回登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</script>
+</body>
+</html>
+
